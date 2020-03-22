@@ -1,185 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="design.css">
-	<script src="design.js"></script>
-	<style>
-		body {
-			font-family: "Lato", sans-serif; 
-			background-color: #07030C
-		}
-
-
-	</style>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<title>Santo K. Thomas - PortFolio | santokalayil.com</title>
 </head>
-
 <body>
+	<header>
+		<div class="logo-container">
+			<img src="./img/logo.ico" alt="logo">
+			<h4 class="logo">SANTO's PortFolio</h4>
+		</div>
+		<nav>
+			<ul class="nav-links">
+				<li><a href="#" class="nav-link">Projects</a></li>
+				<li><a href="#" class="nav-link">Blogs</a></li>
+				<li><a href="#" class="nav-link">Resume</a></li>
+				<li><a href="#" class="nav-link">Kaggle</a></li>
+			</ul>
+		</nav>
+		<div class="github">
 
+			<img src="./img/Github.svg" alt="GitHub">
+		</div>
+	</header>
 
-<!-- Sidebar -->
+	<main>
+		<section class="presentation">
+			<div class="introduction">
+				<div class="intro-text">
+					<h1>Santo K Thomas</h1>
+					<p>A passionate researcher in the field of Data Science.</p>
+				</div>
+				<div class="cta">
+					<button class="cta-connect">
+						Connect
+					</button>
+					<button class="cta-profile">
+						View Profile
+					</button>
+				</div>
+			</div>
+			<div class="cover">
+				<img src="./img/Researcher.jpg" alt="Researcher">
+			</div>
+		</section>
+	</main>
 
-
-  <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
-
- 
-
-
-<!-- Draggable DIV -->
-<div id="mydiv">
-    
-<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
-  
- 
- 
-  <div id="mydivheader">profile window<button onclick="w3_close()" class="w3-large" > &times; </button></div>
-
-
-  <h2 style="text-align:center">Portfolio</h2>
-
-<div class="card">
-  <img src="photo.jpg" alt="santo_k_thomas_photo" style="width:100%">
-  <h1>Santo K. Thomas</h1>
-  <p class="title">Currently Pursuing Data Science</p>
-  <p>Great Learning</p>
-  <div style="margin: 24px 0;">
-    <a href="#"><i class="fa fa-dribbble"></i></a> 
-    <a href="#"><i class="fa fa-twitter"></i></a>  
-    <a href="#"><i class="fa fa-linkedin"></i></a>  
-    <a href="#"><i class="fa fa-facebook"></i></a> 
-  </div>
-  <p>Contact</p>
-</div>
-</div>
-
-</div>
-<!-- button controller for sidebar -->
-
-  <span class="button" onclick="w3_open()"  href="#">menu</span>
-
-
-
-<!-- TopHeader -->
-<div id="TopHeader" class="TopHeader">
-	 <button class="wheels" onclick="w3_open()">S</button>
-  <h1>Santo K. Thomas</h1>
-  <p>the budding data scientist</p> 
-</div>
-
-
-
-
-<!-- Page Content -->
-
-
-
-<!-- Tabbed -->
-
-<button class="tablink" onclick="openCity('London', this, 'red')" id="defaultOpen">London</button>
-<button class="tablink" onclick="openCity('Paris', this, 'green')">Paris</button>
-<button class="tablink" onclick="openCity('Tokyo', this, 'blue')">Tokyo</button>
-<button class="tablink" onclick="openCity('Oslo', this, 'orange')">Oslo</button>
-
-<div id="London" class="tabcontent">
-  <h1>London</h1>
-  <p>London is the capital city of England.</p>
-</div>
-
-<div id="Paris" class="tabcontent">
-  <h1>Paris</h1>
-  <p>Paris is the capital of France.</p> 
-</div>
-
-<div id="Tokyo" class="tabcontent">
-  <h1>Tokyo</h1>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
-
-<div id="Oslo" class="tabcontent">
-  <h1>Oslo</h1>
-  <p>Oslo is the capital of Norway.</p>
-</div>
-
-<script>
-function openCity(cityName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(cityName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-
-}
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
-
-
-
-
-<script>
-
-
-// Make the DIV element draggable:
-dragElement(document.getElementById("mydiv"));
-
-function dragElement(elmnt) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "header")) {
-    // if present, the header is where you move the DIV from:
-    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-  } else {
-    // otherwise, move the DIV from anywhere inside the DIV: 
-    elmnt.onmousedown = dragMouseDown;
-  }
-
-  function dragMouseDown(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // get the mouse cursor position at startup:
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-  }
-
-  function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // calculate the new cursor position:
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    // set the element's new position:
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-  }
-
-  function closeDragElement() {
-    // stop moving when mouse button is released:
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
-}
-	// SIDE BAR WITH CLOSE
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-}
-
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-</script>
-
+	<img src="./img/stylebg.png" class="style-bg">
 
 </body>
 </html>
