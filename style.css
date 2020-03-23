@@ -126,7 +126,19 @@ main {/*
 
 .cover img {
 	height:100%;
-	filter: drop-shadow(0px 1px 1px white);
+	filter: drop-shadow(0px 10px 5px lightblue);
+	animation: appear 1s ease;
+}
+
+@keyframes appear {
+	0% {
+		opacity: 0;
+		transform: translateX(-10px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
 }
 
 .style-bg {
@@ -149,6 +161,7 @@ main {/*
 		transform: translateY(0px);
 	}
 }
+
 
 @media screen and (max-width: 1024px) {
 	.logo {
