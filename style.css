@@ -121,12 +121,12 @@ main {/*
 	flex: 1;
 	display:flex;
 	justify-content: center;
-	height:60vh;
+	height:90vh;
 }
 
 .cover img {
 	height:100%;
-	filter: drop-shadow(0px 5px 3px black);
+	filter: drop-shadow(0px 1px 1px white);
 }
 
 .style-bg {
@@ -183,4 +183,20 @@ main {/*
 		width:100%;
 	}
 
+}
+
+@media screen and (min-width: 400px) {
+	.logo-container img{
+		height: 4vh;
+	}
+	.nav-link {
+		font-size: 18px;
+	}
+	.logo{
+		font-weight: 400;
+		margin:10px;
+	}
+	.github img {
+		height:4vh;
+	}
 }
